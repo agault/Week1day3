@@ -1,4 +1,4 @@
-function countLetters(input) {
+function letterPos(input) {
   var noSpaces= input.split(" ").join('');
   var letters = {}
 
@@ -6,14 +6,16 @@ function countLetters(input) {
     var char = noSpaces[i]
 
     if (letters[char]) {
-      letters[char] += 1
+      letters[char] += i
     } else {
-      letters[char] = 1
+      letters[char] = i
     }
+
   }
-    return letters
+  console.log(letters)
 }
 
-console.log(countLetters("Bacon Pancakes thats what I wanna make"))
+letterPos("Bacon Pancakes thats what i wanna make")
 
 
+   // }letters[noSpaces[i]] =
